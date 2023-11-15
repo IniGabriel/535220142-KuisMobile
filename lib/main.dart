@@ -109,6 +109,21 @@ class MainApp extends StatelessWidget {
                     Text("Rp 7.300                                    Rp 11.000")
                   ],
                 ),
+              ),
+
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      child:ElevatedButton(onPressed: (){}, child: Text("Keranjang")),
+                      margin: EdgeInsets.only(left: 30),
+                    ),
+                    Container(
+                      child:ElevatedButton(onPressed: (){}, child: Text("Keranjang")),
+                      margin: EdgeInsets.only(left: 100),
+                    )
+                  ],
+                ),
               )
             ],
           ),
