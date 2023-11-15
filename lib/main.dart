@@ -124,7 +124,48 @@ class MainApp extends StatelessWidget {
                     )
                   ],
                 ),
-              )
+              ),
+              SizedBox(height: 30),
+
+              Container(
+                height: 180,
+                child: Row(
+                  children: [
+                    Image.asset('img/alfa3.jpg'),
+                    Image.asset('img/alfa4.jpg'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Text("Roma Sari Gandum               mentos Permen Rainbow Roll 37 g")
+                  ],
+                ),
+              ),
+              
+              Container(
+                child: Row(
+                  children: [
+                    Text("Rp 9.900                                  Rp 4.700")
+                  ],
+                ),
+              ),
+
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      child:ElevatedButton(onPressed: (){}, child: Text("Keranjang")),
+                      margin: EdgeInsets.only(left: 30),
+                    ),
+                    Container(
+                      child:ElevatedButton(onPressed: (){}, child: Text("Keranjang")),
+                      margin: EdgeInsets.only(left: 100),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
