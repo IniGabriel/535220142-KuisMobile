@@ -17,3 +17,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - img/share.png
+    - img/basket.png
+    - img/search.png
+    - img/profile.png
+    - img/add-1.jpg
+    - img/add-2.jpg
+    - img/add-3.jpg
+    - img/gambarbawah.jpg
+    - img/alfa1.jpg
+    - img/alfa2.jpg
+    - img/alfa3.jpg
+    - img/alfa4.jpg

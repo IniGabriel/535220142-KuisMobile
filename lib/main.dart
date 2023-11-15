@@ -5,14 +5,113 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          leading: BackButton(
+            onPressed: () {},
+          ),
+          title: Text(
+            "Godrej",
+            style: TextStyle(fontSize: 25),
+          ),
+          toolbarHeight: 100.0,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(45),
+            ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search),
+              padding: EdgeInsets.only(right: 30),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.shopping_basket),
+              padding: EdgeInsets.only(right: 40),
+            ),
+          ],
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                padding: EdgeInsets.all(30),
+                child: PageView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'img/add-${index + 1}.jpg',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.cover,
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                child: Column(
+                  children: [
+                    Text(
+                      "Belanja Berdasarkan Kategori",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SizedBox(height: 10),
+                    Image.asset('img/gambarbawah.jpg'),
+                    Divider(
+                      color: Colors.black,
+                      thickness: 1,
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.only(right: 230),
+                child: Text(
+                  "Semua Produk",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              Container(
+                height: 180,
+                child: Row(
+                  children: [
+                    Image.asset('img/alfa1.jpg'),
+                    Image.asset('img/alfa2.jpg'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Text("KRATINGDAENG 150ml          Paroti Roti Sisir Mentega 140 g")
+                  ],
+                ),
+              ),
+              
+              Container(
+                child: Row(
+                  children: [
+                    Text("Rp 7.300                                    Rp 11.000")
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
